@@ -96,13 +96,6 @@ chars, data_size, vocab_size, char_to_ix, ix_to_char = a["chars"].tolist(), a["d
 
 smooth_loss = -np.log(1.0/vocab_size)*seq_length # loss at iteration 0
 while True:
-    
-  #print char_to_ix[' ']
-  #break
-    
-    
-    
-    
   # prepare inputs (we're sweeping from left to right in steps seq_length long)
   if p+seq_length+1 >= len(data) or n == 0: 
     hprev = np.zeros((hidden_size,1)) # reset RNN memory
